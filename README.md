@@ -7,27 +7,6 @@
 
 ---
 
-## 🌟 Overview & Architecture
-
-SkillLoop AI is an employment-outcomes tracking and skill-gap intelligence platform built as a **modular Spring Boot monolith** in Java 21.
-
-### Shared Sync Architecture (Harshit & Hemanth)
-
-The backend seamlessly synchronizes the core training domain with the post-training employment intelligence domain:
-
-| Domain | Owner | Core Responsibilities |
-|---|---|---|
-| **Auth & Security** | Harshit | User management, roles (`ADMIN`, `INSTITUTE_STAFF`, `TRAINEE`, `EMPLOYER`), JWT authentication filter, CORS for frontend. |
-| **Training & Academics** | Harshit | Courses, batches, consent-based trainee records, enrolments, assessments, certifications. |
-| **Employment Outcomes** | Hemanth | Post-training employment outcomes (`EMPLOYED`, `UNEMPLOYED`, `SELF_EMPLOYED`, `APPRENTICESHIP`, `FURTHER_EDUCATION`, `OUTCOME_UNKNOWN`). |
-| **Longitudinal Follow-up** | Hemanth | Systematic 3, 6, and 12-month milestone tracking. Non-responders marked as `OUTCOME_UNKNOWN`, never misclassified as unemployed. |
-| **Verification & Auditing** | Hemanth | Evidence tracking (`EMPLOYER_CONFIRMED`, `INDEPENDENTLY_CORROBORATED`, `SELF_REPORTED`), conflict flagging, and confidence scoring. |
-| **Skill-Gap Analysis & AI** | Hemanth | Course syllabus vs employer job requirement comparison, transparent percentage calculation, missing skills identification, AI mismatch explanations. |
-| **Course Recommendations** | Hemanth | Actionable curriculum improvement proposals, approval workflow, hypothesis testing on later cohorts. |
-| **Analytics Engine** | Hemanth | Aggregated KPIs, longitudinal retention charts, salary band distributions, and course performance rankings for Recharts frontend. |
-
----
-
 ## 🚀 Quick Start
 
 ### Prerequisites
